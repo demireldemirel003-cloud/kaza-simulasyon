@@ -1,6 +1,5 @@
 "use client";
 
-import "@/lib/react-compat";
 import dynamic from "next/dynamic";
 import { ControlPanel } from "@/components/controls/ControlPanel";
 import { ResultsPanel } from "@/components/results/ResultsPanel";
