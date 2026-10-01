@@ -76,3 +76,5 @@ export function CrashScene() {
     </div>
   );
 }
+
+export default CrashScene;

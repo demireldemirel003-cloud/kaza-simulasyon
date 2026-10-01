@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  reactStrictMode: true,
-  transpilePackages: ["three", "@react-three/fiber", "@react-three/drei", "@react-three/rapier"],
+  reactStrictMode: false,
+  transpilePackages: ["three", "@react-three/fiber", "@react-three/drei"],
 };
 
 export default nextConfig;
