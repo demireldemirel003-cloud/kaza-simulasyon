@@ -66,7 +66,7 @@ function CrashRig() {
 /** R3F tuvali — yalnızca istemci. */
 export function CrashScene() {
   return (
-    <div className="relative h-full min-h-[420px] w-full overflow-hidden rounded-xl border bg-[#0e141b]">
+    <div className="relative h-full min-h-[280px] w-full overflow-hidden rounded-xl border bg-[#0e141b] lg:min-h-[420px]">
       <Canvas shadows dpr={[1, 1.75]} gl={{ antialias: true }}>
         <CrashRig />
       </Canvas>
