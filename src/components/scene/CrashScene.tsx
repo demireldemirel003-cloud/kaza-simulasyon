@@ -4,7 +4,7 @@ import { useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { Physics } from "@react-three/rapier";
-import type { Group } from "three";
+import { ACESFilmicToneMapping, type Group } from "three";
 import { Environment } from "@/components/scene/Environment";
 import { HumanFigure } from "@/components/scene/HumanModel";
 import { Seatbelt } from "@/components/scene/Seatbelt";
@@ -66,12 +66,16 @@ function CrashRig() {
 /** R3F tuvali — yalnızca istemci. */
 export function CrashScene() {
   return (
-    <div className="relative h-full min-h-[280px] w-full overflow-hidden rounded-xl border bg-[#0e141b] lg:min-h-[420px]">
-      <Canvas shadows dpr={[1, 1.75]} gl={{ antialias: true }}>
+    <div className="relative h-full min-h-[280px] w-full overflow-hidden rounded-xl border bg-[#111a23] lg:min-h-[420px]">
+      <Canvas
+        shadows
+        dpr={[1, 1.75]}
+        gl={{ antialias: true, toneMapping: ACESFilmicToneMapping }}
+      >
         <CrashRig />
       </Canvas>
-      <p className="pointer-events-none absolute bottom-3 left-3 text-[11px] text-white/70">
-        Placeholder geometri · glTF modeller sonraki aşamada bağlanacak
+      <p className="pointer-events-none absolute bottom-3 left-3 rounded-full border border-white/10 bg-slate-950/55 px-3 py-1.5 text-[11px] text-white/75 backdrop-blur-sm">
+        Şematik 3B görünüm · çarpışma hasarı gösterimi değildir
       </p>
     </div>
   );
