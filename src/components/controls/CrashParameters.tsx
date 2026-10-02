@@ -43,7 +43,7 @@ export function CrashParameters() {
       <Field id="impact" label="Çarpışma tipi">
         <select
           id="impact"
-          className="h-9 w-full rounded-md border border-input bg-background px-2 text-sm"
+          className="h-11 w-full rounded-md border border-input bg-background px-3 text-base lg:h-9 lg:px-2 lg:text-sm"
           value={scenario.impactType}
           onChange={(e) => patch({ impactType: e.target.value as ImpactType })}
         >

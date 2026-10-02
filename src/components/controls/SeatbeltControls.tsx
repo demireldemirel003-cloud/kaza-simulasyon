@@ -41,7 +41,7 @@ export function SeatbeltControls() {
       >
         <select
           id="belt-type"
-          className="h-9 w-full rounded-md border border-input bg-background px-2 text-sm"
+          className="h-11 w-full rounded-md border border-input bg-background px-3 text-base lg:h-9 lg:px-2 lg:text-sm"
           value={belt.type}
           onChange={(e) => patch({ type: e.target.value as SeatbeltType })}
         >
@@ -61,7 +61,7 @@ export function SeatbeltControls() {
         <select
           id="shoulder-fit"
           disabled={disabled}
-          className="h-9 w-full rounded-md border border-input bg-background px-2 text-sm disabled:opacity-50"
+          className="h-11 w-full rounded-md border border-input bg-background px-3 text-base disabled:opacity-50 lg:h-9 lg:px-2 lg:text-sm"
           value={belt.shoulderFit}
           onChange={(e) => patch({ shoulderFit: e.target.value as ShoulderFit })}
         >
@@ -81,7 +81,7 @@ export function SeatbeltControls() {
         <select
           id="lap-fit"
           disabled={disabled}
-          className="h-9 w-full rounded-md border border-input bg-background px-2 text-sm disabled:opacity-50"
+          className="h-11 w-full rounded-md border border-input bg-background px-3 text-base disabled:opacity-50 lg:h-9 lg:px-2 lg:text-sm"
           value={belt.lapFit}
           onChange={(e) => patch({ lapFit: e.target.value as LapFit })}
         >

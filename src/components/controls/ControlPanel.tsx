@@ -16,34 +16,34 @@ import { Separator } from "@/components/ui/separator";
 
 export function ControlPanel() {
   return (
-    <aside className="flex h-full min-h-0 flex-col border-r bg-card">
-      <div className="p-4 pb-2">
-        <h2 className="text-sm font-semibold">Kontrol paneli</h2>
-        <p className="text-xs text-muted-foreground">Antropometri, kemer ve çarpışma</p>
+    <aside className="flex h-auto min-h-0 flex-col rounded-xl border bg-card lg:h-full lg:rounded-none lg:border-y-0 lg:border-l-0">
+      <div className="p-5 pb-3 lg:p-4 lg:pb-2">
+        <h2 className="text-base font-semibold lg:text-sm">Kontrol paneli</h2>
+        <p className="text-sm text-muted-foreground lg:text-xs">Antropometri, kemer ve çarpışma</p>
       </div>
       <Separator />
-      <ScrollArea className="flex-1">
-        <Accordion type="multiple" defaultValue={["human", "vehicle", "belt", "crash"]} className="px-4">
+      <ScrollArea className="flex-none lg:flex-1">
+        <Accordion type="multiple" defaultValue={["human", "vehicle", "belt", "crash"]} className="px-5 lg:px-4">
           <AccordionItem value="human">
-            <AccordionTrigger>İnsan modeli</AccordionTrigger>
+            <AccordionTrigger className="py-4 text-base lg:py-3 lg:text-sm">İnsan modeli</AccordionTrigger>
             <AccordionContent>
               <HumanSelector />
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="vehicle">
-            <AccordionTrigger>Araç</AccordionTrigger>
+            <AccordionTrigger className="py-4 text-base lg:py-3 lg:text-sm">Araç</AccordionTrigger>
             <AccordionContent>
               <VehicleSelector />
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="belt">
-            <AccordionTrigger>Emniyet kemeri</AccordionTrigger>
+            <AccordionTrigger className="py-4 text-base lg:py-3 lg:text-sm">Emniyet kemeri</AccordionTrigger>
             <AccordionContent>
               <SeatbeltControls />
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="crash">
-            <AccordionTrigger>Çarpışma parametreleri</AccordionTrigger>
+            <AccordionTrigger className="py-4 text-base lg:py-3 lg:text-sm">Çarpışma parametreleri</AccordionTrigger>
             <AccordionContent>
               <CrashParameters />
             </AccordionContent>
@@ -51,7 +51,7 @@ export function ControlPanel() {
         </Accordion>
       </ScrollArea>
       <Separator />
-      <div className="p-4">
+      <div className="p-5 lg:p-4">
         <SimulationControls />
       </div>
     </aside>
